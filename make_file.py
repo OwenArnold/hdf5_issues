@@ -21,7 +21,7 @@ parent_dir =arguments.OutFilePath
 f = h5py.File(os.path.join(parent_dir, 'test_file.hdf5'), 'w')
 # type variable length string
 dt = h5py.special_dtype(vlen=str)     
-dset = f.create_dataset("dataset", (1,), dtype=dt, data=u"this_is_a_utf8_var_length_string")
+dset = f.create_dataset("dataset", dtype=dt, data=u"this_is_a_utf8_var_length_string")
 f.close()
 
 
